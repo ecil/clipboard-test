@@ -7,3 +7,5 @@ https://native-toolchain.s3.amazonaws.com/build/cdp_components/7049391/tarballs/
 
 python2 hadoop_jmx_exporter.py -cluster yh-cdh -nns http://10.193.40.10:50070/jmx http://10.193.40.3:50070/jmx -rms http://yh-shhd-cdh04:8088/jmx http://yh-shhd-cdh01:8088/jmx
 Listen at 0.0.0.0:6688
+wget https://dl.grafana.com/oss/release/grafana-6.5.3-1.x86_64.rpm
+sudo yum install grafana-6.5.3-1.x86_64.rpm
