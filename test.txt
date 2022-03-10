@@ -9,3 +9,11 @@ python2 hadoop_jmx_exporter.py -cluster yh-cdh -nns http://10.193.40.10:50070/jm
 Listen at 0.0.0.0:6688
 wget https://dl.grafana.com/oss/release/grafana-6.5.3-1.x86_64.rpm
 sudo yum install grafana-6.5.3-1.x86_64.rpm
+
+hadoop::common_hdfs::tls_enabled: true
+hadoop::common_hdfs::keystore_location: "/opt/cloudera/security/jks/hadoop.keystore"
+hadoop::common_hdfs::keystore_password: "BigDataVF2"
+hadoop::common_hdfs::keystore_type: "jks"
+hadoop::common_hdfs::truststore_location: "/opt/cloudera/security/jks/bigldmmp01.jks"
+hadoop::common_hdfs::truststore_type: "jks"
+hadoop::common_hdfs::truststore_password: "BigDataVF2"
