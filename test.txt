@@ -17,3 +17,23 @@ hadoop::common_hdfs::keystore_type: "jks"
 hadoop::common_hdfs::truststore_location: "/opt/cloudera/security/jks/bigldmmp01.jks"
 hadoop::common_hdfs::truststore_type: "jks"
 hadoop::common_hdfs::truststore_password: "BigDataVF2"
+
+
+<property>
+    <name>dfs.http.policy</name>
+    <value>HTTPS_ONLY</value>
+  </property>
+  <property>
+    <name>dfs.client.https.need-auth</name>
+    <value>false</value>
+  </property>
+  <property>
+    <name>dfs.namenode.https-bind-host</name>
+    <value>0.0.0.0</value>
+  </property>
+  
+  
+  hadoop_hive::common_config::tls_enabled: true
+hadoop_hive::common_config::keystore_location: "/opt/cloudera/security/jks/hadoop.keystore"
+hadoop_hive::common_config::keystore_password: "BigDataVF2"
+hadoop_hive::common_config::keystore_type: "jks"
